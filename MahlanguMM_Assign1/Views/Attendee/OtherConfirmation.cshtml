@@ -1,0 +1,13 @@
+﻿@model Attendee
+@{
+    ViewData["Title"] = "Confirmation";
+}
+<div class="text-center">
+    <h3>@ViewBag.Name, you have been registered!</h3>
+    <p>
+
+        Please check your inbox for payment details.
+
+    </p>
+    <a class="btn btn-success" asp-controller="Home" asp-action="Index">Return to Home Page</a>
+</div>

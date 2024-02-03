@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Attendee>
+@{
+    ViewData["Title"] = "Attendee List";
+}
+<h3>Here is a list of all the conference attendees</h3>
+<table class="table table-sm table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(a => a.Name)</th>
+            <th>@Html.DisplayNameFor(a => a.Email)</th>
+            <th>@Html.DisplayNameFor(a => a.PhoneNumber)</th>
+            <th>@Html.DisplayNameFor(a => a.Capacity)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Attendee a in Model)
+        {
+            <tr>
+                <td>@a.Name</td>
+                <td>@a.Email</td>
+                <td>@a.PhoneNumber</td>
+                <td>@a.Capacity.CapacityName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Home" asp-action="Index"
+   class="btn btn-success">Return to Home Page</a>
